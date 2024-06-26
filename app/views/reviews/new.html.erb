@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Add a review</h1>
+
+  <%= simple_form_for [ @list, @review ] do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :rating %>
+  <%= f.submit "Comment", class: "btn btn-ghost mt-5" %>
+  <% end %>
+
+</div>

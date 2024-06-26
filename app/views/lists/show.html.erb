@@ -1,0 +1,32 @@
+<%= render "navbar" %>
+
+<div class="container">
+
+  <h1><%= @list.name %></h1>
+
+  <% @list.bookmarks.each do |b| %>
+  <li><%= b.movie.title %> -
+  <%= b.comment %> -
+  <%= link_to "Delete", bookmark_path(b), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+  <% end %>
+
+  <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-ghost my-3" %>
+
+
+
+  <div class="d-flex">
+    <div>
+      <h2>Reviews</h2>
+      <% @list.reviews.each do |r| %>
+      <p><%= r.rating %> -
+      <%= r.comment %>
+      </p>
+      <% end %>
+    </div>
+
+    <div>
+      <%= render "reviews/form", list: @list, review: @review %>
+    </div>
+  </div>
+
+</div>
