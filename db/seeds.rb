@@ -9,7 +9,7 @@
 #   end
 
 Movie.destroy_all
-List.destroy_all
+# List.destroy_all
 
 puts "creating movies"
 
@@ -20,10 +20,10 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 
 puts "#{Movie.count} movies created"
 
-puts "creating lists"
-List.create(name: "Girl movie")
-List.create(name: "Horror")
-List.create(name: "Humor")
-List.create(name: "Thriller")
+# puts "creating lists"
+# List.create(name: "Girl movie")
+# List.create(name: "Horror")
+# List.create(name: "Humor")
+# List.create(name: "Thriller")
 
-puts "#{List.count} lists created"
+# puts "#{List.count} lists created"
